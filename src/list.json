@@ -1,0 +1,24 @@
+{
+  "tokens": [
+    {
+      "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "symbol": "XRP",
+      "decimals": 18,
+      "totalSupply": "100000000000.0",
+
+      "name": "XRP",
+      "description": "Canonical representation of XRP for the EVM side-chain.",
+
+      "image": "https://xrise33.com/images/xrplevm-logo.svg",
+      "external_url": "https://xrplevm.org/",
+      "background_color": "0A84FF",
+
+      "attributes": [{ "trait_type": "Category", "value": "Utility" }],
+
+      "extensions": {
+        "coingeckoId": "ripple",
+        "documentation": "https://docs.xrplevm.org/"
+      }
+    }
+  ]
+}
