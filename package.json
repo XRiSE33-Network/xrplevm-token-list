@@ -1,0 +1,41 @@
+{
+  "name": "@xrise33/token-list",
+  "version": "0.1.0",
+  "description": "Community‑maintained, machine‑readable list of XRPL‑EVM tokens.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx scripts/validate.ts",
+    "test": "npm run typecheck && npm run validate",
+    "prepublishOnly": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XRiSE33-Network/xrplevm-token-list.git"
+  },
+  "keywords": [
+    "token-list",
+    "xrpl",
+    "evm",
+    "erc20",
+    "json-schema"
+  ],
+  "author": "XRiSE33 Network",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/XRiSE33-Network/xrplevm-token-list/issues"
+  },
+  "homepage": "https://github.com/XRiSE33-Network/xrplevm-token-list#readme",
+  "files": [
+    "src/list.json",
+    "schema"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "ethers": "^6.15.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
