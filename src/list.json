@@ -1,10 +1,12 @@
 {
+  "$schema": "../schema/tokenlist.schema.json",
   "tokens": [
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      "chainId": 1440000,
       "symbol": "XRP",
       "decimals": 18,
-      "totalSupply": "100000000000.0",
+      "totalSupply": "1000000000000",
 
       "name": "XRP",
       "description": "Canonical representation of XRP for the EVM side-chain.",
@@ -19,6 +21,93 @@
         "coingeckoId": "ripple",
         "documentation": "https://docs.xrplevm.org/"
       }
+    },
+    {
+      "address": "0xbf11bf1b83E7d1845A2b343D8F961C5461b27511",
+      "chainId": 1440000,
+      "decimals": 18,
+      "symbol": "XRISE",
+      "image": "https://xrise33.com/images/xrise33-logo.svg"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0xB5cF36c9708C4F728bb8B1059C28Cc9b606bD102",
+      "symbol": "RIBBIT",
+      "name": "Ribbit Coin",
+      "decimals": 18,
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PHBhdGggc3R5bGU9ImZpbGw6I2JlZTE3OCIgZD0iTTE0IDI3OS45OThjMCA0Ny4zNTMgNzYuMTgxIDEzOCAyNDIgMTM4czI0Mi05MC42NDcgMjQyLTEzOHoiLz48cGF0aCBzdHlsZT0iZmlsbDojZDJmMGEwIiBkPSJNMjU2IDI4My45OThIMTJzMCAzNiA0Mi4wNjkgMzZjMzMuNjU1IDAgMTE3Ljc5My0xOCAyMDEuOTMxLTE4czE2OC4yNzYgMTggMjAxLjkzMSAxOGM0Mi4wNjkgMCA0Mi4wNjktMzYgNDIuMDY5LTM2eiIvPjxwYXRoIHN0eWxlPSJmaWxsOiM4MmMzNWYiIGQ9Ik00OTIuODE4IDI0My4yMDhjLTguODk3LTYuNTc1LTIwLjIxMS0xNC4yMTUtMzIuODQtMjIuMjU4bC0xLjE4My0xMi45MDNDNDY3LjAwNCAxOTcuNDM4IDQ3MiAxODMuNDQ5IDQ3MiAxNjguMTA5YzAtMTkuOTE3LTguNDE3LTM3LjU1OS0yMS4zNjUtNDguNDcyLTE2LjA4NC0yOS4yMDgtNjEuMDY3LTM2LjY5My04Ni45MTUtMTYuMDUzQzMyOCAxMzIuMTA5IDI5NC42NjcgMTQ4LjEwOSAyNTYgMTQ4LjEwOXMtNzItMTYtMTA3LjcyLTQ0LjUyNGMtMjUuODQ4LTIwLjY0LTcwLjgzLTEzLjE1NS04Ni45MTUgMTYuMDUzQzQ4LjQxNyAxMzAuNTUxIDQwIDE0OC4xOTIgNDAgMTY4LjEwOWMwIDE2LjQ3NSA1Ljc1OSAzMS4zOTYgMTUuMDc1IDQyLjIzOGwtLjYyMiA5LjA1OWMtMTMuNjA4IDguNjA4LTI1LjgwOCAxNi44MDctMzUuMjcxIDIzLjgwMUMxMi44NTUgMjQ3Ljg4MyA4IDI1NS4zODEgOCAyNjQuNDU5YzAgMTMgOC43ODIgMjMuNTM5IDE5LjYxNSAyMy41MzloNDU2Ljc3YzEwLjgzMyAwIDE5LjYxNS0xMC41MzkgMTkuNjE1LTIzLjUzOSAwLTkuMDc4LTQuODU1LTE2LjU3Ni0xMS4xODItMjEuMjUxIi8+PHBhdGggc3R5bGU9ImZpbGw6Izk2Y2Q3OCIgZD0iTTE0NCAxNjguMTFhNTIgNjAgMCAwIDEtNTIgNjAgNTIgNjAgMCAwIDEtNTItNjAgNTIgNjAgMCAwIDEgMTA0IDBtMzI4IDBhNTIgNjAgMCAwIDEtNTIgNjAgNTIgNjAgMCAwIDEtNTItNjAgNTIgNjAgMCAwIDEgMTA0IDAiLz48cGF0aCBkPSJNNDcyIDI2OC4xMDlINDBhOCA4IDAgMCAwIDAgMTZoNDMyYTggOCAwIDAgMCAwLTE2bS0xNTIgMzJIMTkyYTggOCAwIDAgMCAwIDE2aDEyOGE4IDggMCAwIDAgMC0xNiIvPjxwYXRoIGQ9Ik00ODMuMTA1IDIyNC45NDljLTkuNzE3LTguMDk0LTEzLjc0MS0xMS45My0xMS45MjEtMjEuMzk4IDUuNTg4LTEwLjMyOCA4LjgxNi0yMi40NjQgOC44MTYtMzUuNDQxIDAtMjEuNzEyLTkuMDM2LTQxLjA2NS0yMy4wNTgtNTMuNTIzLTguNjctMTQuODM0LTI0LjI4My0yNS40NjMtNDMuMTI0LTI5LjI0Ni0yMC4wNS00LjAyNy00MC42NDQuNDU4LTU1LjA5IDExLjk5NEMzMjEuNjgyIDEyNi45MTcgMjkwIDE0MC4xMDkgMjU2IDE0MC4xMDlzLTY1LjY4Mi0xMy4xOTItMTAyLjcyOC00Mi43NzZjLTE0LjQ0Ni0xMS41MzUtMzUuMDQtMTYuMDItNTUuMDktMTEuOTk0LTE4Ljg0MSAzLjc4My0zNC40NTQgMTQuNDEyLTQzLjEyNCAyOS4yNDZDNDEuMDM2IDEyNy4wNDQgMzIgMTQ2LjM5NyAzMiAxNjguMTA5YzAgMTIuOTc3IDMuMjI4IDI1LjExMyA4LjgxNiAzNS40NDEgMS44MiA5LjQ2OC0yLjIwNCAxMy4zMDUtMTEuOTIxIDIxLjM5OEMxNi43MDEgMjM1LjEwNiAwIDI0OS4wMTggMCAyODQuMTA5YzAgMzAuOTM5IDQ0LjQgNjguMDE3IDg1Ljk1MSA5Mi40IDU1Ljg4MyAzMi43OTIgMTE3Ljg2NCA1MS42IDE3MC4wNDkgNTEuNnMxMTQuMTY2LTE4LjgwOCAxNzAuMDQ5LTUxLjZDNDY3LjYgMzUyLjEyNiA1MTIgMzE1LjA0OSA1MTIgMjg0LjEwOWMwLTM1LjA5MS0xNi43MDEtNDkuMDAzLTI4Ljg5NS01OS4xNk00NjQgMTY4LjEwOWMwIDEwLjU4NS0yLjY5NiAyMC40MzctNy4zMTIgMjguNjYxLS4wNzguMTMxLS4xNDguMjY2LS4yMTkuNDAyLTcuOTE2IDEzLjgyOS0yMS4zMSAyMi45MzctMzYuNDcgMjIuOTM3LTI0LjI2MiAwLTQ0LTIzLjMyNy00NC01MnMxOS43MzgtNTIgNDQtNTJjOS4yODIgMCAxNy44OTYgMy40MjMgMjUuMDAyIDkuMjQ1cS41MjguNTM0IDEuMTM1Ljk1NWMxMC44MjkgOS40ODEgMTcuODY0IDI0LjY4NiAxNy44NjQgNDEuOE02NS44NTcgMTI2LjMxNGE4IDggMCAwIDAgMS4xNDQtLjk2MmM3LjEwNS01LjgyIDE1LjcxOC05LjI0MiAyNC45OTktOS4yNDIgMjQuMjYyIDAgNDQgMjMuMzI3IDQ0IDUycy0xOS43MzggNTItNDQgNTJjLTE1LjE1OSAwLTI4LjU1Mi05LjEwNy0zNi40NjgtMjIuOTM1LS4wNzItLjEzOC0uMTQzLS4yNzUtLjIyMi0uNDA3LTQuNjE0LTguMjIzLTcuMzEtMTguMDc0LTcuMzEtMjguNjU4IDAtMTcuMTExIDcuMDMyLTMyLjMxNSAxNy44NTctNDEuNzk2bTM1Mi4wOTQgMjM2LjM5NWMtNTIuNzEzIDMwLjkzMy0xMTMuMjU2IDQ5LjQtMTYxLjk1MSA0OS40cy0xMDkuMjM4LTE4LjQ2Ny0xNjEuOTUxLTQ5LjRDNDguMDk1IDMzNS43NDQgMTYgMzAzLjQyMiAxNiAyODQuMTA5YzAtMjcuNTk2IDExLjc2MS0zNy4zOTMgMjMuMTM1LTQ2Ljg2NyA1LjU0Ny00LjYyMSAxMS40OTQtOS41ODMgMTUuMDA2LTE2LjQyNiAxMC4zMzQgOS41NTIgMjMuNTE0IDE1LjI5MyAzNy44NTggMTUuMjkzIDMzLjA4NCAwIDYwLTMwLjUwNSA2MC02OCAwLTMzLjgwMy0yMS44NzktNjEuOTE0LTUwLjQyOS02Ny4xMjUgMTUuMzk2LTMuMDI1IDMwLjk3NS4yNzMgNDEuNzE3IDguODUyIDQwLjA3NSAzMi4wMDIgNzQuODM3IDQ2LjI3MyAxMTIuNzEyIDQ2LjI3M3M3Mi42MzctMTQuMjcxIDExMi43MTItNDYuMjczYzEwLjc0My04LjU3OSAyNi4zMjEtMTEuODc4IDQxLjcxNy04Ljg1MkMzODEuODc5IDEwNi4xOTUgMzYwIDEzNC4zMDcgMzYwIDE2OC4xMDljMCAzNy40OTUgMjYuOTE2IDY4IDYwIDY4IDE0LjM0NCAwIDI3LjUyNC01Ljc0MSAzNy44NTgtMTUuMjkzIDMuNTEyIDYuODQyIDkuNDU5IDExLjgwNSAxNS4wMDYgMTYuNDI2QzQ4NC4yMzkgMjQ2LjcxNyA0OTYgMjU2LjUxMyA0OTYgMjg0LjEwOWMwIDE5LjMxMy0zMi4wOTUgNTEuNjM1LTc4LjA0OSA3OC42Ii8+PHBhdGggZD0iTTkyIDE4MC4xMDljOC40NDUgMCAzNi0xLjE1NCAzNi0xNnMtMjcuNTU1LTE2LTM2LTE2LTM2IDEuMTU0LTM2IDE2IDI3LjU1NSAxNiAzNiAxNm0yOTItMTZjMCAxNC44NDYgMjcuNTU1IDE2IDM2IDE2czM2LTEuMTU0IDM2LTE2LTI3LjU1NS0xNi0zNi0xNi0zNiAxLjE1NC0zNiAxNm0tMTUyIDY0YTggOCAwIDAgMCA4LTh2LThhOCA4IDAgMCAwLTE2IDB2OGE4IDggMCAwIDAgOCA4bTQ4IDBhOCA4IDAgMCAwIDgtOHYtOGE4IDggMCAwIDAtMTYgMHY4YTggOCAwIDAgMCA4IDgiLz48L3N2Zz4="
+    },
+    {
+      "chainId": 1440000,
+      "address": "0x6d8630D167458b337A2c8b6242c354d2f4f75D96",
+      "symbol": "XRPB",
+      "name": "RippleBids Token",
+      "decimals": 18,
+      "image": "https://xrise33.com/images/xrpb-logo.jpg"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0x5E54c1bbc5F19C7A39CC6ff7dbdFBdF438a3CD60",
+      "symbol": "USDf",
+      "name": "Falcon USD",
+      "decimals": 18,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/35721.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0x693Ee27688B4E77788BCc31948f4C83e540d3a3e",
+      "symbol": "mTBILL",
+      "name": "Midas US Treasury Bill Token",
+      "decimals": 18,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/37085.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0xa16148c6Ac9EDe0D82f0c52899e22a575284f131",
+      "symbol": "USDC",
+      "name": "USD Coin",
+      "decimals": 6,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0x50498dC52bCd3dAeB54B7225A7d2FA8D536F313E",
+      "symbol": "WETH",
+      "name": "Wrapped Ether",
+      "decimals": 18,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0xF8Eb4Ed0d4CF2bb707c0272F8C6827dEB6e4C0A9",
+      "symbol": "WBTC",
+      "name": "Wrapped BTC",
+      "decimals": 8,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/4023.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0x9F8CF9c00fac501b3965872f4ed3271f6f4d06fF",
+      "symbol": "USDT",
+      "name": "Tether USD",
+      "decimals": 6,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0xDc556F7209C48fC53a8cDf1339c033743A7e3e75",
+      "symbol": "DAI",
+      "name": "Dai Stablecoin",
+      "decimals": 18,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png"
+    },
+    {
+      "chainId": 1440000,
+      "address": "0xE5747226D2005d7f0865780E8517397de66f2a76",
+      "symbol": "FDUSD",
+      "name": "First Digital USD",
+      "decimals": 18,
+      "image": "https://s2.coinmarketcap.com/static/img/coins/64x64/26081.png"
     }
   ]
 }
