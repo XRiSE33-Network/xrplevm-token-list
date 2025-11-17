@@ -8,8 +8,12 @@
  */
 
 import fs from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import path from "node:path";
 import process from "node:process";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import Ajv from "ajv";
 import addFormats from "ajv-formats";

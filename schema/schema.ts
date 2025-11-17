@@ -1,10 +1,10 @@
-interface Attribute {
+export interface Attribute {
   trait_type?: string; // e.g. "Category"
   value: string | number; // e.g. "Utility" or 1000000
   display_type?: string; // e.g. "number", "date"
 }
 
-interface TokenMetadata {
+export interface TokenMetadata {
   name: string;
   description: string;
   image?: string; // repo-relative path or URI, validated by scripts

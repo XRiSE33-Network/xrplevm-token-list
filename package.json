@@ -1,13 +1,14 @@
 {
   "name": "@xrise33/token-list",
   "version": "0.1.0",
+  "type": "module",
   "description": "Community-maintained, machine-readable list of XRPL EVM tokens.",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate.ts",
     "test": "pnpm typecheck && pnpm validate",
     "prepublishOnly": "pnpm test && pnpm build",
-    "build": "mkdir -p dist && cp src/list.json dist/tokenlist.json"
+    "build": "tsx scripts/build.ts && tsc -p tsconfig.types.json"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
   ],
   "author": "XRiSE33 Network",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/XRiSE33-Network/xrplevm-token-list/issues"
   },
@@ -36,8 +36,16 @@
     "schema"
   ],
   "exports": {
-    ".": "./dist/tokenlist.json"
+    ".": {
+      "import": "./dist/tokenlist.json",
+      "require": "./dist/tokenlist.json",
+      "types": "./dist/types-entry.d.ts"
+    },
+    "./schema": {
+      "types": "./dist/schema/schema.d.ts"
+    }
   },
+  "types": "dist/types-entry.d.ts",
   "devDependencies": {
     "@types/node": "^24.0.14",
     "ajv": "^8.17.1",
