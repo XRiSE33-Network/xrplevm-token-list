@@ -77,6 +77,16 @@ export function getLogoUri(
   if (token.logoURI) return token.logoURI;
   if (!token.image) return undefined;
 
+  // If image is already absolute, just return it.
+  if (
+    token.image.startsWith("http://") ||
+    token.image.startsWith("https://") ||
+    token.image.startsWith("ipfs://") ||
+    token.image.startsWith("data:")
+  ) {
+    return token.image;
+  }
+
   const {
     packageName = "@xrise33/token-list",
     version = "latest",
