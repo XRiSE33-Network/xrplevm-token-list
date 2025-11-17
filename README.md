@@ -1,5 +1,6 @@
 # @xrise33/token-list - XRPL EVM Token List
 
+[![npm version](https://img.shields.io/npm/v/@xrise33/token-list.svg)](https://www.npmjs.com/package/@xrise33/token-list)
 [![CI](https://github.com/XRiSE33-Network/xrplevm-token-list/actions/workflows/ci.yml/badge.svg)](https://github.com/XRiSE33-Network/xrplevm-token-list/actions/workflows/ci.yml)
 
 Canonical, versioned, and validated token metadata registry for the XRPL EVM sidechain ecosystem.

@@ -122,6 +122,7 @@ async function main() {
         if (!allowedTagIds.has(tagId)) {
           bail(
             `Unknown tag '${tagId}' on token ${sym} (chain ${chainId}). ` +
+              `Expected one of: ${Array.from(allowedTagIds).join(", ")}. ` +
               `Define it under top-level 'tags' in the token list.`
           );
         }
