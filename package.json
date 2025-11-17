@@ -1,6 +1,6 @@
 {
   "name": "@xrise33/token-list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Community-maintained, machine-readable list of XRPL EVM tokens.",
   "scripts": {
