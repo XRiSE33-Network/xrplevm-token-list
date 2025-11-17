@@ -160,7 +160,7 @@
 
     "token": {
       "type": "object",
-      "required": ["address", "symbol", "decimals", "chainId"],
+      "required": ["address", "symbol", "decimals", "chainId", "tags"],
       "properties": {
         "address": {
           "type": "string",

@@ -1,8 +1,95 @@
 {
   "$schema": "../schema/tokenlist.schema.json",
   "name": "XRPL EVM Token List",
-  "timestamp": "2025-11-16T10:22:00Z",
-  "version": { "major": 1, "minor": 0, "patch": 0 },
+  "timestamp": "2025-11-17T06:25:00Z",
+  "version": { "major": 1, "minor": 2, "patch": 0 },
+  "license": { "name": "MIT" },
+  "tags": {
+    "canonical": {
+      "name": "Canonical",
+      "description": "First-class, chain-endorsed, or native base-layer asset."
+    },
+    "wrapped": {
+      "name": "Wrapped",
+      "description": "Bridged or synthetic representation of an asset from another chain."
+    },
+    "stablecoin": {
+      "name": "Stablecoin",
+      "description": "Pegged to a fiat currency, commodity, or other price reference."
+    },
+    "dex": {
+      "name": "DEX / DeFi",
+      "description": "Tokens powering AMMs, liquidity, routing, or decentralized exchange protocols."
+    },
+    "meme": {
+      "name": "Meme",
+      "description": "Cultural, humorous, or viral tokens without strict fundamental backing."
+    },
+    "governance": {
+      "name": "Governance",
+      "description": "DAO or protocol decision-making / voting token."
+    },
+    "utility": {
+      "name": "Utility",
+      "description": "Used in protocol operations such as fees, staking, access, or rewards."
+    },
+    "security": {
+      "name": "Security-like",
+      "description": "May resemble financial investment instruments or profit-expectation assets."
+    },
+    "synthetic": {
+      "name": "Synthetic",
+      "description": "Derivative tokens pegged to external assets (equities, treasuries, commodities, etc)."
+    },
+    "bridge": {
+      "name": "Bridge",
+      "description": "Cross-chain interoperability, messaging, or transfer infrastructure token."
+    },
+    "liquid_staking": {
+      "name": "Liquid Staking",
+      "description": "LST or yield-bearing representation of staked assets."
+    },
+    "nft_related": {
+      "name": "NFT Ecosystem",
+      "description": "Marketplace, gaming, collectibles or metaverse-driven tokens."
+    },
+    "payment": {
+      "name": "Payment",
+      "description": "Primary purpose is settlement, remittance, or monetary expenditure."
+    },
+    "rwa": {
+      "name": "Real-World Assets",
+      "description": "Backed by off-chain, physical, or regulated financial assets."
+    },
+    "gamfi": {
+      "name": "GameFi",
+      "description": "Gaming and interactive incentive-driven economy tokens."
+    },
+    "exchange": {
+      "name": "Exchange-Issued",
+      "description": "Native token issued by a centralized exchange or custodial platform."
+    },
+    "privacy": {
+      "name": "Privacy-Enhanced",
+      "description": "Tokens focused on anonymity, obfuscation, or advanced privacy-preservation."
+    }
+  },
+  "keywords": [
+    "xrplevm",
+    "xrpl",
+    "evm",
+    "xrpl-evm-sidechain",
+    "bridge",
+    "defi",
+    "dex",
+    "stablecoin",
+    "rwa",
+    "gaming",
+    "nft",
+    "payment",
+    "token-list",
+    "registry"
+  ],
   "tokens": [
     {
       "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
@@ -19,7 +106,8 @@
       "extensions": {
         "coingeckoId": "ripple",
         "documentation": "https://docs.xrplevm.org/"
-      }
+      },
+      "tags": ["canonical"]
     },
     {
       "address": "0xbf11bf1b83E7d1845A2b343D8F961C5461b27511",
@@ -27,7 +115,8 @@
       "decimals": 18,
       "symbol": "XRISE",
       "image": "images/1440000/0xbf11bf1b83E7d1845A2b343D8F961C5461b27511.svg",
-      "logoURI": "https://xrise33.com/images/xrise33-logo.svg"
+      "logoURI": "https://xrise33.com/images/xrise33-logo.svg",
+      "tags": ["dex", "utility", "governance"]
     },
     {
       "chainId": 1440000,
@@ -35,7 +124,8 @@
       "symbol": "RIBBIT",
       "name": "Ribbit Coin",
       "decimals": 18,
-      "image": "images/1440000/0xB5cF36c9708C4F728bb8B1059C28Cc9b606bD102.png"
+      "image": "images/1440000/0xB5cF36c9708C4F728bb8B1059C28Cc9b606bD102.png",
+      "tags": ["meme"]
     },
     {
       "chainId": 1440000,
@@ -43,7 +133,8 @@
       "symbol": "XRPB",
       "name": "RippleBids Token",
       "decimals": 18,
-      "image": "images/1440000/0x6d8630D167458b337A2c8b6242c354d2f4f75D96.jpg"
+      "image": "images/1440000/0x6d8630D167458b337A2c8b6242c354d2f4f75D96.jpg",
+      "tags": ["meme"]
     },
     {
       "chainId": 1440000,
@@ -51,7 +142,8 @@
       "symbol": "USDf",
       "name": "Falcon USD",
       "decimals": 18,
-      "image": "images/1440000/0x5E54c1bbc5F19C7A39CC6ff7dbdFBdF438a3CD60.png"
+      "image": "images/1440000/0x5E54c1bbc5F19C7A39CC6ff7dbdFBdF438a3CD60.png",
+      "tags": ["stablecoin"]
     },
     {
       "chainId": 1440000,
@@ -59,7 +151,8 @@
       "symbol": "mTBILL",
       "name": "Midas US Treasury Bill Token",
       "decimals": 18,
-      "image": "images/1440000/0x693Ee27688B4E77788BCc31948f4C83e540d3a3e.png"
+      "image": "images/1440000/0x693Ee27688B4E77788BCc31948f4C83e540d3a3e.png",
+      "tags": ["rwa", "synthetic"]
     },
     {
       "chainId": 1440000,
@@ -67,7 +160,8 @@
       "symbol": "USDC",
       "name": "USD Coin",
       "decimals": 6,
-      "image": "images/1440000/0xa16148c6Ac9EDe0D82f0c52899e22a575284f131.png"
+      "image": "images/1440000/0xa16148c6Ac9EDe0D82f0c52899e22a575284f131.png",
+      "tags": ["stablecoin"]
     },
     {
       "chainId": 1440000,
@@ -75,7 +169,8 @@
       "symbol": "WETH",
       "name": "Wrapped Ether",
       "decimals": 18,
-      "image": "images/1440000/0x50498dC52bCd3dAeB54B7225A7d2FA8D536F313E.png"
+      "image": "images/1440000/0x50498dC52bCd3dAeB54B7225A7d2FA8D536F313E.png",
+      "tags": ["wrapped"]
     },
     {
       "chainId": 1440000,
@@ -83,7 +178,8 @@
       "symbol": "WBTC",
       "name": "Wrapped BTC",
       "decimals": 8,
-      "image": "images/1440000/0xF8Eb4Ed0d4CF2bb707c0272F8C6827dEB6e4C0A9.png"
+      "image": "images/1440000/0xF8Eb4Ed0d4CF2bb707c0272F8C6827dEB6e4C0A9.png",
+      "tags": ["wrapped"]
     },
     {
       "chainId": 1440000,
@@ -91,7 +187,8 @@
       "symbol": "USDT",
       "name": "Tether USD",
       "decimals": 6,
-      "image": "images/1440000/0x9F8CF9c00fac501b3965872f4ed3271f6f4d06fF.png"
+      "image": "images/1440000/0x9F8CF9c00fac501b3965872f4ed3271f6f4d06fF.png",
+      "tags": ["stablecoin"]
     },
     {
       "chainId": 1440000,
@@ -99,7 +196,8 @@
       "symbol": "DAI",
       "name": "Dai Stablecoin",
       "decimals": 18,
-      "image": "images/1440000/0xDc556F7209C48fC53a8cDf1339c033743A7e3e75.png"
+      "image": "images/1440000/0xDc556F7209C48fC53a8cDf1339c033743A7e3e75.png",
+      "tags": ["stablecoin"]
     },
     {
       "chainId": 1440000,
@@ -107,7 +205,8 @@
       "symbol": "FDUSD",
       "name": "First Digital USD",
       "decimals": 18,
-      "image": "images/1440000/0xE5747226D2005d7f0865780E8517397de66f2a76.png"
+      "image": "images/1440000/0xE5747226D2005d7f0865780E8517397de66f2a76.png",
+      "tags": ["stablecoin"]
     },
     {
       "chainId": 1440000,
@@ -116,7 +215,8 @@
       "name": "XRPawz",
       "decimals": 18,
       "image": "images/1440000/0xC2af05cfDc44B8B57b0cFAcfe6C0C1102069d3e6.png",
-      "logoURI": "https://www.xrpawz.com/xrpawz-logo.png"
+      "logoURI": "https://www.xrpawz.com/xrpawz-logo.png",
+      "tags": ["meme"]
     },
     {
       "chainId": 1440000,
@@ -124,7 +224,8 @@
       "symbol": "mXRP",
       "name": "Midas XRP",
       "decimals": 18,
-      "image": "images/1440000/0x06e0B0F1A644Bb9881f675Ef266CeC15a63a3d47.svg"
+      "image": "images/1440000/0x06e0B0F1A644Bb9881f675Ef266CeC15a63a3d47.svg",
+      "tags": ["rwa"]
     }
   ]
 }

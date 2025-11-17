@@ -7,8 +7,8 @@
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate.ts",
     "test": "pnpm typecheck && pnpm validate",
-    "prepublishOnly": "pnpm test && pnpm build",
-    "build": "tsx scripts/build.ts && tsc -p tsconfig.types.json && tsc -p tsconfig.sdk.json"
+    "prepublishOnly": "pnpm build",
+    "build": "pnpm test && tsx scripts/build.ts && tsc -p tsconfig.types.json && tsc -p tsconfig.sdk.json"
   },
   "repository": {
     "type": "git",
