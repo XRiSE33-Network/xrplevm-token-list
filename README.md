@@ -35,19 +35,13 @@ console.log(tokenList.tokens.length);
 Access types:
 
 ```ts
-import type { TokenListFile, TokenInfo } from "@xrise33/token-list";
+import type { TokenListFile, TokenInfo } from "@xrise33/token-list/schema";
 
 const list: TokenListFile = tokenList;
 
 function filterStablecoins(tokens: TokenInfo[]) {
   return tokens.filter((t) => t.tags?.includes("stablecoin"));
 }
-```
-
-You can also import schema types directly:
-
-```ts
-import type { TokenListFile } from "@xrise33/token-list/schema";
 ```
 
 Node (CJS):

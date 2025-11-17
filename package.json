@@ -45,8 +45,8 @@
       "types": "./dist/schema/schema.d.ts"
     },
     "./sdk": {
-      "import": "./dist/sdk.js",
-      "types": "./dist/sdk.d.ts"
+      "import": "./dist/src/sdk.js",
+      "types": "./dist/src/sdk.d.ts"
     }
   },
   "types": "dist/types-entry.d.ts",
