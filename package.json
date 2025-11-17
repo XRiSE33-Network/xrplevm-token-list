@@ -1,6 +1,6 @@
 {
   "name": "@xrise33/token-list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "Community-maintained, machine-readable list of XRPL EVM tokens.",
   "scripts": {
@@ -45,8 +45,8 @@
       "types": "./dist/schema/schema.d.ts"
     },
     "./sdk": {
-      "import": "./dist/sdk.js",
-      "types": "./dist/sdk.d.ts"
+      "import": "./dist/src/sdk.js",
+      "types": "./dist/src/sdk.d.ts"
     }
   },
   "types": "dist/types-entry.d.ts",
