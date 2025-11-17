@@ -7,6 +7,136 @@
     "$schema": {
       "type": "string"
     },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name for the token list e.g. 'XRPLEVM Token List'"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC ISO-8601 timestamp when this list was generated"
+    },
+    "version": {
+      "type": "object",
+      "required": ["major", "minor", "patch"],
+      "properties": {
+        "major": { "type": "integer", "minimum": 0 },
+        "minor": { "type": "integer", "minimum": 0 },
+        "patch": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "logoURI": {
+      "type": "string",
+      "format": "uri",
+      "description": "Logo for this token list (PNG/SVG recommended)."
+    },
+
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "description": "Optional keywords helping UIs discover or categorize this list."
+    },
+
+    "license": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "License name or SPDX identifier, e.g. 'MIT', 'CC0-1.0'."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Homepage or full text of the license."
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "tags": {
+      "type": "object",
+      "description": "Registry of tag descriptors referenced by tokens.",
+      "patternProperties": {
+        "^[a-z0-9-_]{1,32}$": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Human-readable tag name, e.g. 'Stablecoin'."
+            },
+            "description": {
+              "type": "string",
+              "description": "Optional longer explanation of the tag."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "sources": {
+      "type": "array",
+      "description": "Sources used to build or verify this list.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short name of the source, e.g. 'CoinGecko', 'Project Docs'."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the source, API, or documentation."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "coingecko",
+              "cmc",
+              "project",
+              "explorer",
+              "manual",
+              "other"
+            ],
+            "description": "Optional classification of the source."
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+
+    "verification": {
+      "type": "object",
+      "description": "Information about how this list was reviewed or audited.",
+      "properties": {
+        "policy": {
+          "type": "string",
+          "description": "Human-readable description of the verification policy."
+        },
+        "lastAudit": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of the last manual or automated review."
+        },
+        "auditor": {
+          "type": "string",
+          "description": "Name or handle of the auditor/maintainer."
+        }
+      },
+      "additionalProperties": true
+    },
     "tokens": {
       "type": "array",
       "minItems": 0,
@@ -41,14 +171,14 @@
           "type": "integer",
           "minimum": 1,
           "default": 1440000,
-          "description": "EIP‑155 chain identifier (1=Ethereum, 56=BSC, …)"
+          "description": "EIP-155 chain identifier (1=Ethereum, 56=BSC, …)"
         },
         "symbol": {
           "type": "string",
           "minLength": 1,
           "maxLength": 10,
-          "description": "Ticker (all‑caps, ≤ 10 chars).",
-          "markdownDescription": "**Ticker** used on UIs.\n\n*Upper‑case, 1–10 characters.*"
+          "description": "Ticker (all-caps, ≤ 10 chars).",
+          "markdownDescription": "**Ticker** used on UIs.\n\n*Upper-case, 1-10 characters.*"
         },
         "decimals": {
           "type": "integer",
@@ -67,7 +197,12 @@
         "description": { "type": "string" },
         "image": {
           "type": "string",
-          "format": "uri"
+          "format": "uri-reference"
+        },
+        "logoURI": {
+          "type": "string",
+          "format": "uri",
+          "description": "Optional absolute URI for the token logo."
         },
         "external_url": {
           "type": "string",
@@ -88,6 +223,15 @@
         "youtube_url": {
           "type": "string",
           "format": "uri"
+        },
+        "tags": {
+          "type": "array",
+          "description": "List of tag IDs defined in top-level `tags`.",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-_]{1,32}$"
+          },
+          "uniqueItems": true
         },
         "extensions": {
           "type": "object",
