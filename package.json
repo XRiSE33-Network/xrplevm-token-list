@@ -1,41 +1,65 @@
 {
   "name": "@xrise33/token-list",
-  "version": "0.1.0",
-  "description": "Community‑maintained, machine‑readable list of XRPL‑EVM tokens.",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Community-maintained, machine-readable list of XRPL EVM tokens.",
   "scripts": {
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate.ts",
-    "test": "npm run typecheck && npm run validate",
-    "prepublishOnly": "npm run test"
+    "test": "pnpm typecheck && pnpm validate",
+    "prepublishOnly": "pnpm test && pnpm build",
+    "build": "tsx scripts/build.ts && tsc -p tsconfig.types.json && tsc -p tsconfig.sdk.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/XRiSE33-Network/xrplevm-token-list.git"
   },
   "keywords": [
-    "token-list",
     "xrpl",
     "evm",
     "erc20",
-    "json-schema"
+    "json-schema",
+    "xrplevm",
+    "token",
+    "cryptocurrency",
+    "token-list"
   ],
-  "author": "XRiSE33 Network",
+  "author": "XRiSE33 Network",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/XRiSE33-Network/xrplevm-token-list/issues"
   },
   "homepage": "https://github.com/XRiSE33-Network/xrplevm-token-list#readme",
   "files": [
-    "src/list.json",
+    "dist",
+    "images",
     "schema"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/tokenlist.json",
+      "require": "./dist/tokenlist.json",
+      "types": "./dist/types-entry.d.ts"
+    },
+    "./schema": {
+      "types": "./dist/schema/schema.d.ts"
+    },
+    "./sdk": {
+      "import": "./dist/sdk.js",
+      "types": "./dist/sdk.d.ts"
+    }
+  },
+  "types": "dist/types-entry.d.ts",
   "devDependencies": {
     "@types/node": "^24.0.14",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "ethers": "^6.15.0",
+    "sharp": "^0.34.5",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
