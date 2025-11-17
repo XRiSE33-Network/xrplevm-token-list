@@ -59,7 +59,7 @@ export function getLogoUri(
   token: TokenInfo,
   options?: {
     /**
-     * npm package name, default: "xrplevm-token-list"
+     * npm package name, default: "@xrise33/token-list"
      */
     packageName?: string;
     /**
@@ -69,7 +69,7 @@ export function getLogoUri(
     version?: string;
     /**
      * Override entire base (e.g. for self-hosted CDN).
-     * Example: "https://cdn.mycdn.com/xrplevm-token-list/1.0.0"
+     * Example: "https://cdn.mycdn.com/@xrise33/token-list/1.0.0"
      */
     baseUriOverride?: string;
   }
