@@ -8,7 +8,7 @@
     "validate": "tsx scripts/validate.ts",
     "test": "pnpm typecheck && pnpm validate",
     "prepublishOnly": "pnpm test && pnpm build",
-    "build": "tsx scripts/build.ts && tsc -p tsconfig.types.json"
+    "build": "tsx scripts/build.ts && tsc -p tsconfig.types.json && tsc -p tsconfig.sdk.json"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,10 @@
     },
     "./schema": {
       "types": "./dist/schema/schema.d.ts"
+    },
+    "./sdk": {
+      "import": "./dist/sdk.js",
+      "types": "./dist/sdk.d.ts"
     }
   },
   "types": "dist/types-entry.d.ts",
